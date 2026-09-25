@@ -2,25 +2,21 @@
 title: Getting Started
 nextjs:
   metadata:
-    title: YOUR_APP_NAME - Getting Started
-    description: Getting started with using YOUR_APP_NAME.
+    title: dinkum-data - Getting Started
+    description: Getting started with dinkum-data, a comprehensive, fully-typed dataset for Dinkum with structured JSON data, image assets, and a chainable query builder API.
 ---
 
-<!-- CHANGE_ME: rewrite this whole page for your project. The structure
-     below (quick-links, a Quick start section, Resources, Getting help)
-     is a starting scaffold, not fixed content. -->
-
-Learn how to get YOUR_APP_NAME set up.
+Documentation for the dinkum-data npm package: a comprehensive, fully-typed dataset for Dinkum with structured JSON data, 2,000+ bundled image assets, and a chainable query builder API for animals, farming, gear, recipes, and more. {% .lead %}
 
 {% quick-links %}
 
-{% quick-link title="Installation" icon="installation" href="/docs/installation" description="Step-by-step guides to setting up your system and installing the library." /%}
+{% quick-link title="Installation" icon="installation" href="/docs/installation" description="Install the package and start querying Dinkum data in your project." /%}
 
-{% quick-link title="Usage" icon="presets" href="/docs/usage" description="Understand how to use it in your project." /%}
+{% quick-link title="Core concepts" icon="presets" href="/docs/core-concepts" description="Learn the factory function and query builder pattern shared by every module." /%}
 
-{% quick-link title="Contributing" icon="plugins" href="/docs/how-to-contribute" description="Learn how to contribute to the project." /%}
+{% quick-link title="Query builder" icon="plugins" href="/docs/query-builder" description="Filter, sort, and look up crops, animals, gear, and more with chainable methods." /%}
 
-{% quick-link title="Roadmap" icon="theming" href="https://github.com/users/YOUR_GITHUB_USERNAME/projects/1" description="See what is planned or being worked on." /%}
+{% quick-link title="TypeScript" icon="theming" href="/docs/typescript" description="Full TypeScript support with typed exports for every module." /%}
 
 {% /quick-links %}
 
@@ -28,41 +24,70 @@ Learn how to get YOUR_APP_NAME set up.
 
 ## Quick start
 
-YOUR_APP_NAME is a CHANGE_ME_ONE_LINE_DESCRIPTION.
+### Install the package
 
-### Features
+```shell
+npm install dinkum-data
+```
 
-- CHANGE_ME: list your project's key features here
+### Import and query data
+
+```typescript
+import { animals, fish, licenses, seeds } from 'dinkum-data'
+
+// Domesticable animals
+animals().domesticable().get()
+
+// Find a specific fish
+fish().findByName('Sturgeon')
+
+// Rare fish, most valuable first
+fish().byRarity('Rare').sortByBaseSellPrice().get()
+
+// Spring-plantable seeds, fastest growing first
+seeds().bySeason('Spring').sortByGrowthPeriod().get()
+
+// Total permit points needed to max every license
+licenses().totalPermitPoints()
+```
 
 ---
 
-## Resources
+## What's included
 
-### License
+The package provides fully-typed data and query builders for nearly 40 modules across the game:
 
-YOUR_APP_NAME is available as open source under the terms of the [MIT License](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/LICENSE).
+- **Wildlife & Museum**: Wild, farm, and tameable animals; Museum-donatable bugs, critters, and fish
+- **Farming & Foraging**: Crops, seeds, foragables, trees, and flowers
+- **Resources & Materials**: Animal products, minerals, paint, relics, trophies, and processed craftables
+- **Recipes**: Cooking, crafting, Food Modeller conversions, and sign-writing recipes
+- **Gear & Equipment**: Books, cassettes, equipment, tools, vehicles, and weapons
+- **Clothing, Furniture & Decorations**: Wearable clothing, placeable furniture, and 265 world decorations
+- **World**: Buildings and deeds, and every resident NPC
+- **Progression**: Licenses, milestones, daily milestones, and skills
+- **Calendar**: The full 112-day calendar with birthdays and events
+- **Calculators & Reference**: The weight calculator dataset and buff icon lookups
 
-### Change Log
+---
 
-See the [change log](/docs/change-log) for release history.
+## Data source
+
+All game data is sourced from the [Dinkum Wiki](https://dinkum.fandom.com/wiki/Dinkum_Wiki) and kept up-to-date with each game update.
 
 ---
 
 ## Getting help
 
-There are many ways to get assistance via Issues, Discussions, and Pull Requests.
+### Submit an issue
+
+Found a bug or have a feature request? Open an issue on the [GitHub repository](https://github.com/chiefpansancolt/dinkum-data/issues).
+
+### View on GitHub
+
+Check out the source code at [github.com/chiefpansancolt/dinkum-data](https://github.com/chiefpansancolt/dinkum-data).
 
 ### Contributing
 
-Bug reports, feature requests, and pull requests are welcome on GitHub at [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/CODE_OF_CONDUCT.md) code of conduct.
+Bug reports, feature requests, and pull requests are welcome. See [how to contribute](/docs/how-to-contribute) for details.
 
-To see more about contributing check out this [document](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/.github/CONTRIBUTING.md).
-
-- Fork the repo and create a new branch
-- Once everything is changed and committed, create a pull request
-
-**Ensure all merge conflicts are fixed and CI is passing.**
-
-### Join the community
-
-Join the community by posting in our [discussions](https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/discussions) on GitHub.
+This project is not affiliated with, endorsed, or sponsored by James Bendon or KRAFTON. Dinkum is a trademark of its respective owners.

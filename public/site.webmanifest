@@ -1,6 +1,6 @@
 {
-  "name": "YOUR_APP_NAME",
-  "short_name": "YOUR_APP",
+  "name": "dinkum-data",
+  "short_name": "dinkum-data",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

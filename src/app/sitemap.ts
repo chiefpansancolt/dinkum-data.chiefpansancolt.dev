@@ -2,9 +2,9 @@ import type { MetadataRoute } from 'next'
 
 import { navigation } from '@/lib/navigation'
 
-// CHANGE_ME: must match siteUrl in src/app/layout.tsx and SITE_URL in
+// must match siteUrl in src/app/layout.tsx and SITE_URL in
 // src/app/robots.ts
-const SITE_URL = 'https://YOUR_APP_NAME.example.com'
+const SITE_URL = 'https://dinkum-data.chiefpansancolt.dev'
 
 function getDocRoutes(): string[] {
   const routes = new Set<string>(['/'])

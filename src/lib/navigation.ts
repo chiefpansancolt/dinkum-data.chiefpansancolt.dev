@@ -4,7 +4,72 @@ export const navigation = [
     links: [
       { title: 'Getting started', href: '/' },
       { title: 'Installation', href: '/docs/installation' },
-      { title: 'How to use', href: '/docs/usage' },
+      { title: 'Core concepts', href: '/docs/core-concepts' },
+    ],
+  },
+  {
+    title: 'Guides',
+    links: [
+      { title: 'Query builder basics', href: '/docs/query-builder' },
+      { title: 'TypeScript integration', href: '/docs/typescript' },
+      { title: 'Image assets', href: '/docs/images' },
+    ],
+  },
+  {
+    title: 'Wildlife & Museum',
+    links: [
+      { title: 'Animals', href: '/docs/animals' },
+      { title: 'Museum: bugs, critters & fish', href: '/docs/museum' },
+    ],
+  },
+  {
+    title: 'Farming & Foraging',
+    links: [
+      { title: 'Crops & seeds', href: '/docs/crops' },
+      { title: 'Foragables, trees & flowers', href: '/docs/foraging' },
+    ],
+  },
+  {
+    title: 'Resources & Materials',
+    links: [{ title: 'Resources', href: '/docs/resources' }],
+  },
+  {
+    title: 'Recipes',
+    links: [{ title: 'Recipes', href: '/docs/recipes' }],
+  },
+  {
+    title: 'Gear & Equipment',
+    links: [
+      { title: 'Tools & weapons', href: '/docs/tools-weapons' },
+      { title: 'Equipment, books, cassettes & vehicles', href: '/docs/gear' },
+    ],
+  },
+  {
+    title: 'Clothing, Furniture & Decorations',
+    links: [
+      { title: 'Clothing', href: '/docs/clothing' },
+      { title: 'Furniture & decorations', href: '/docs/furniture' },
+    ],
+  },
+  {
+    title: 'World',
+    links: [{ title: 'Buildings & NPCs', href: '/docs/world' }],
+  },
+  {
+    title: 'Progression',
+    links: [
+      { title: 'Licenses, milestones & skills', href: '/docs/progression' },
+    ],
+  },
+  {
+    title: 'Calendar',
+    links: [{ title: 'Calendar', href: '/docs/calendar' }],
+  },
+  {
+    title: 'Calculators & Reference',
+    links: [
+      { title: 'Weight calculator', href: '/docs/weight-calculator' },
+      { title: 'Buff icons', href: '/docs/buff-icons' },
     ],
   },
   {
@@ -18,14 +83,9 @@ export const navigation = [
   {
     title: 'Resources',
     links: [
-      // CHANGE_ME: update or remove these — they're placeholders
-      {
-        title: 'Roadmap',
-        href: 'https://github.com/users/YOUR_GITHUB_USERNAME/projects/1',
-      },
       {
         title: 'License',
-        href: 'https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO/blob/main/LICENSE',
+        href: 'https://github.com/chiefpansancolt/dinkum-data/blob/main/LICENSE',
       },
     ],
   },

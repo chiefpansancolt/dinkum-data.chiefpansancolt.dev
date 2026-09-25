@@ -19,18 +19,16 @@ export function Hero() {
               priority
             />
             <div className="relative">
-              {/* CHANGE_ME: title, tagline, and GitHub link below */}
               <p className="inline bg-linear-to-r from-indigo-200 via-sky-400 to-indigo-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
-                YOUR_APP_NAME
+                dinkum-data
               </p>
               <p className="mt-3 text-2xl tracking-tight text-slate-400">
-                A one or two sentence tagline describing what YOUR_APP_NAME
-                does.
+                A comprehensive, fully-typed dataset for Dinkum.
               </p>
               <div className="mt-8 flex gap-4 md:justify-center lg:justify-start">
                 <Button href="/">Get started</Button>
                 <Button
-                  href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO"
+                  href="https://github.com/chiefpansancolt/dinkum-data"
                   variant="secondary"
                 >
                   View on GitHub
@@ -39,9 +37,6 @@ export function Hero() {
             </div>
           </div>
           <div className="relative lg:static xl:pl-10">
-            {/* CHANGE_ME: replace this decorative background with a product
-                screenshot (see src/app/docs/usage/page.md for the `figure`
-                tag pattern), or leave it as-is for a text-only hero. */}
             <div className="absolute inset-x-[-50vw] -top-32 -bottom-48 mask-[linear-gradient(transparent,white,white)] lg:-top-32 lg:right-0 lg:-bottom-32 lg:left-[calc(50%+14rem)] lg:mask-none dark:mask-[linear-gradient(transparent,white,transparent)] lg:dark:mask-[linear-gradient(white,white,transparent)]">
               <HeroBackground className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-0 lg:translate-x-0 lg:translate-y-[-60%]" />
             </div>
