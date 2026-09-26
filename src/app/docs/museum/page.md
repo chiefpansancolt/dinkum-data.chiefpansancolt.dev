@@ -12,7 +12,7 @@ Access every Museum-donatable bug, critter, and fish in Dinkum, with biome, rari
 
 ## Shared shape
 
-All three modules on this page — `bugs()`, `critters()`, and `fish()` — extend the same base type, `PediaItem`:
+All three modules on this page (`bugs()`, `critters()`, and `fish()`) extend the same base type, `PediaItem`:
 
 ```typescript
 interface PediaItem {
@@ -37,7 +37,7 @@ All three query builders share the same core filter set: `byBiome(biome)`, `byRa
 
 ## Bugs
 
-`bugs()` returns a query over all 50 Museum-donatable bugs. `Bug` is a plain alias for `PediaItem` — no extra fields.
+`bugs()` returns a query over all 50 Museum-donatable bugs. `Bug` is a plain alias for `PediaItem`, with no extra fields.
 
 ```typescript
 import { bugs } from 'dinkum-data'

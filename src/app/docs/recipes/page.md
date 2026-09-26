@@ -28,7 +28,7 @@ interface Recipe {
 }
 ```
 
-`ResourceVariant` (`{ id, outputCount?, inputs: Resource[] }`) describes one buildable ingredient set for a recipe — most recipes have exactly one variant, but some have several alternate ways to craft the same output. Each `Resource` input carries its own `name`, `img`, and `count`. See [TypeScript integration](/docs/typescript) for the full `Resource`/`ResourceVariant`/`Buffs` shapes.
+`ResourceVariant` (`{ id, outputCount?, inputs: Resource[] }`) describes one buildable ingredient set for a recipe. Most recipes have exactly one variant, but some have several alternate ways to craft the same output. Each `Resource` input carries its own `name`, `img`, and `count`. See [TypeScript integration](/docs/typescript) for the full `Resource`/`ResourceVariant`/`Buffs` shapes.
 
 Every recipe module shares the same terminal methods (`get`, `first`, `find`, `findByName`, `search`, `count`) and, in every case except Food Modeller's filters, a `bySource(source: string)` filter and a `sortByBaseSellPrice(order?)` sort.
 
@@ -74,7 +74,7 @@ cookingRecipes().byLocation('Campfire').sortByBaseSellPrice().get()
 
 ## Crafting Recipes
 
-`craftingRecipes()` returns a `CraftingRecipeQuery` over the 235 craftable recipes and their unlock sources — the largest recipe module in the package.
+`craftingRecipes()` returns a `CraftingRecipeQuery` over the 235 craftable recipes and their unlock sources. It's the largest recipe module in the package.
 
 ### Examples
 

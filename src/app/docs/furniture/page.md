@@ -89,7 +89,7 @@ furniture().bySource('Recycling Bin').get()
 
 `decorations()` returns a `DecorationQuery` over all 265 items, grouped by category: paths, fences, benches, bridges, lights, statues, and more.
 
-Many of these items also appear in [crafting recipes](/docs/recipes) or in the Furniture module above — this module is a curated index across every decoration category shown on the wiki, not a separate source of truth for those items' prices.
+Many of these items also appear in [crafting recipes](/docs/recipes) or in the Furniture module above. This module is a curated index across every decoration category shown on the wiki, not a separate source of truth for those items' prices.
 
 ### Type
 

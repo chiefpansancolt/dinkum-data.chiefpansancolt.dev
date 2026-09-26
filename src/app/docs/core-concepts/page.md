@@ -12,7 +12,7 @@ Every standard module in dinkum-data follows the same pattern: once you learn it
 
 ## One factory function per module
 
-dinkum-data is organized into roughly 40 modules, each covering one category of Dinkum data — crops, animals, furniture, tools, and so on. Every module exports a **factory function** that returns a chainable query builder:
+dinkum-data is organized into roughly 40 modules, each covering one category of Dinkum data: crops, animals, furniture, tools, and so on. Every module exports a **factory function** that returns a chainable query builder:
 
 ```typescript
 import { animals, crops, furniture } from 'dinkum-data'
@@ -146,12 +146,12 @@ const allRare = rareFish.get()
 
 Four modules don't follow this pattern, because their source data isn't a flat, filterable list:
 
-- **[Calendar](/docs/calendar)** — a fixed 112-day structure, accessed via `calendar()`
-- **[Daily Milestones](/docs/progression)** — a fixed set of category-grouped arrays, accessed via `dailyMilestones()`, `dailyMilestonesByCategory()`, and `allDailyMilestones()`
-- **[Clothing Slots](/docs/clothing)** — a lookup table via `clothingSlots()` and `clothingTypesForSlot()`
-- **[Buff Icons](/docs/buff-icons)** — a lookup table via `buffIcons()`
+- **[Calendar](/docs/calendar)**: a fixed 112-day structure, accessed via `calendar()`
+- **[Daily Milestones](/docs/progression)**: a fixed set of category-grouped arrays, accessed via `dailyMilestones()`, `dailyMilestonesByCategory()`, and `allDailyMilestones()`
+- **[Clothing Slots](/docs/clothing)**: a lookup table via `clothingSlots()` and `clothingTypesForSlot()`
+- **[Buff Icons](/docs/buff-icons)**: a lookup table via `buffIcons()`
 
-Each of these still returns plain, fully-typed data — they just don't have `.get()`, `.first()`, and friends, since there's nothing to filter.
+Each of these still returns plain, fully-typed data. They just don't have `.get()`, `.first()`, and friends, since there's nothing to filter.
 
 ---
 

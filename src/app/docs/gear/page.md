@@ -98,7 +98,7 @@ interface BookDetail {
 | `buyingPrice`  | `number \| 'Gift'` | Purchase price, or `'Gift'` if it can only be received as a gift |
 | `sellingPrice` | `number`           | Sell price in Dinks                                              |
 
-Books have no filter methods — only the standard terminal methods below.
+Books have no filter methods, only the standard terminal methods below.
 
 ### Examples
 
@@ -172,7 +172,7 @@ interface Vehicle {
 }
 ```
 
-Shares the same `requirementLevel`/`requirementType`/`shinyDiscCount`/`berkoniumOreCount`/`windmillCompatable`/`solarPanelCompatable` fields as Equipment above. Note: unlike Equipment, Vehicle has no `buyUnits` field — every vehicle's `buyPrice` is in Dinks.
+Shares the same `requirementLevel`/`requirementType`/`shinyDiscCount`/`berkoniumOreCount`/`windmillCompatable`/`solarPanelCompatable` fields as Equipment above. Note: unlike Equipment, Vehicle has no `buyUnits` field, since every vehicle's `buyPrice` is in Dinks.
 
 ### Filters & Sorts
 

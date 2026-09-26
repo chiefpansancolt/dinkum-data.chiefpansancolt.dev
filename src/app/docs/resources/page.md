@@ -99,7 +99,7 @@ minerals().findByName('Berkonium Ore')
 
 ## Paint
 
-`paint()` returns a `PaintQuery` over the 12 paint colors used for customizing buildings and vehicles. `Paint` is an alias for `BaseResource` — no extra fields beyond `id`, `name`, `img`, `source`, `baseSellPrice`, and `buyPrice`.
+`paint()` returns a `PaintQuery` over the 12 paint colors used for customizing buildings and vehicles. `Paint` is an alias for `BaseResource`, with no extra fields beyond `id`, `name`, `img`, `source`, `baseSellPrice`, and `buyPrice`.
 
 ### Filters
 
@@ -168,7 +168,7 @@ relics().uniqueLocations()
 
 ## Trophies
 
-`trophies()` returns a `TrophyQuery` over the 6 trophies awarded from Bug Catching and Fish Catching Competitions. `Trophy` is an alias for `BaseResource` — no filters beyond the standard terminal methods.
+`trophies()` returns a `TrophyQuery` over the 6 trophies awarded from Bug Catching and Fish Catching Competitions. `Trophy` is an alias for `BaseResource`, with no filters beyond the standard terminal methods.
 
 ### Examples
 
@@ -183,7 +183,7 @@ trophies().findByName('Gold Bug Comp Trophy')
 
 ## Other Craftables
 
-`otherCraftables()` returns an `OtherCraftableQuery` over the 32 miscellaneous craftable resources that don't fit the recipe modules — processed goods from the Crusher, Stone Grinder, and Grain Mill. It uses the same shared `Recipe` type as [Recipes](/docs/recipes).
+`otherCraftables()` returns an `OtherCraftableQuery` over the 32 miscellaneous craftable resources that don't fit the recipe modules: processed goods from the Crusher, Stone Grinder, and Grain Mill. It uses the same shared `Recipe` type as [Recipes](/docs/recipes).
 
 ### Type
 

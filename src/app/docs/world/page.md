@@ -54,7 +54,7 @@ interface Building {
 | `operatingHours` | `string[]`   | Hours the building's associated shop or service is open |
 | `daysClosed`     | `string`     | Days the building is closed, if any                     |
 
-`Resource` is `{ name: string; img: string; count: number }` — see [TypeScript integration](/docs/typescript) for the shared type.
+`Resource` is `{ name: string; img: string; count: number }`. See [TypeScript integration](/docs/typescript) for the shared type.
 
 ### Filters
 

@@ -95,7 +95,7 @@ clothing().cloversCatalogue().get()
 
 ## Clothing Slots
 
-`clothingSlots()` and `clothingTypesForSlot()` expose the clothing-slot taxonomy: which `Clothing.type` values are valid for each of the 5 clothing slots (`Head`, `Face`, `Body`, `Legs`, `Feet`). This module has no query builder, since the source data is a fixed grouped object rather than a flat, filterable list — see [core concepts](/docs/core-concepts#modules-without-a-query-builder) for why a handful of modules work this way.
+`clothingSlots()` and `clothingTypesForSlot()` expose the clothing-slot taxonomy: which `Clothing.type` values are valid for each of the 5 clothing slots (`Head`, `Face`, `Body`, `Legs`, `Feet`). This module has no query builder, since the source data is a fixed grouped object rather than a flat, filterable list. See [core concepts](/docs/core-concepts#modules-without-a-query-builder) for why a handful of modules work this way.
 
 ### Type
 

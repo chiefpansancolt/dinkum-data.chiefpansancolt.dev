@@ -22,7 +22,7 @@ const lexend = localFont({
 })
 
 // siteUrl must match SITE_URL in src/app/robots.ts and
-// src/app/sitemap.ts — a mismatch between these was a real bug found
+// src/app/sitemap.ts. A mismatch between these was a real bug found
 // across several sites cloned from this template's sibling repos.
 const siteUrl = 'https://dinkum-data.chiefpansancolt.dev'
 const siteDescription =

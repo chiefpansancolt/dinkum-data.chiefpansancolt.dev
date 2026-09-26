@@ -92,6 +92,6 @@ export const navigation = [
 ]
 
 // NOTE: src/app/sitemap.ts and src/app/robots.ts read this file directly to
-// generate the sitemap and to build search-page metadata — add every new
+// generate the sitemap and to build search-page metadata. Add every new
 // internal doc page here (an `href` starting with "/") and it's picked up
 // automatically. External links (http/https) are ignored by the sitemap.

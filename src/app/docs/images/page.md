@@ -128,7 +128,7 @@ const watermelon = crops().findByName('Watermelon')!
 
 ### In Next.js
 
-With the copy step above in place, `img` fields work directly with `next/image` — no helper function needed, since the path is already public-root-relative:
+With the copy step above in place, `img` fields work directly with `next/image`, no helper function needed, since the path is already public-root-relative:
 
 ```tsx
 import Image from 'next/image'
@@ -144,7 +144,7 @@ function CropIcon({ name }: { name: string }) {
 }
 ```
 
-`unoptimized` is recommended here since these are small, pre-sized game sprites — Next's image optimization pipeline adds overhead without much benefit for icons this size.
+`unoptimized` is recommended here since these are small, pre-sized game sprites. Next's image optimization pipeline adds overhead without much benefit for icons this size.
 
 ---
 

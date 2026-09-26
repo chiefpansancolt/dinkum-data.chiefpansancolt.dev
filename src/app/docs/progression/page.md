@@ -245,7 +245,7 @@ skills().findByName('Fishing')
 
 The repeatable daily task pool, grouped by category (Day One, Travel, NPC, Fishing, Farming, Foraging, Logging, Mining, Excavation, Bug Catching, Crafting, Hunting, Trapping, Dinks). 120 tasks are included across all categories.
 
-This module has no query builder, since the source data is a fixed set of grouped arrays rather than one flat, filterable list — see [core concepts](/docs/core-concepts#modules-without-a-query-builder).
+This module has no query builder, since the source data is a fixed set of grouped arrays rather than one flat, filterable list. See [core concepts](/docs/core-concepts#modules-without-a-query-builder).
 
 ### Type
 

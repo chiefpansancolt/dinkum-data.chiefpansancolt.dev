@@ -84,7 +84,7 @@ const wildAnimals = animals().byType('Wild Animal').get()
 const hats = clothing().bySlot('Head').get()
 ```
 
-See each module's own docs page for its exact filter list — the field reference table on every page lists which of these patterns (and any module-specific filters) apply.
+See each module's own docs page for its exact filter list. The field reference table on every page lists which of these patterns (and any module-specific filters) apply.
 
 ---
 
@@ -210,7 +210,7 @@ function queryFurniture(set?: string, catalogueOnly?: boolean) {
 
 ### Nested ingredient data
 
-Recipe-shaped modules (cooking, crafting, sign writing, Food Modeller) carry a `variants` array on each recipe, listing the input items needed for each craftable output — read it straight off the entity, no separate query needed:
+Recipe-shaped modules (cooking, crafting, sign writing, Food Modeller) carry a `variants` array on each recipe, listing the input items needed for each craftable output. Read it straight off the entity, no separate query needed:
 
 ```typescript
 import { craftingRecipes } from 'dinkum-data'

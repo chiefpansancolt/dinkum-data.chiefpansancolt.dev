@@ -12,7 +12,7 @@ Access every farmable crop and plantable seed in Dinkum, including growing seaso
 
 ## How crops and seeds relate
 
-Every `Crop` embeds the `Seed` it grows from directly on its own `seed` field, so you can usually work from `crops()` alone. The standalone `seeds()` module exists for querying the full seed catalog on its own terms — it also covers tree and bush seeds that don't have a corresponding `Crop` entry.
+Every `Crop` embeds the `Seed` it grows from directly on its own `seed` field, so you can usually work from `crops()` alone. The standalone `seeds()` module exists for querying the full seed catalog on its own terms. It also covers tree and bush seeds that don't have a corresponding `Crop` entry.
 
 ```typescript
 import { crops } from 'dinkum-data'
@@ -88,7 +88,7 @@ interface Crop {
 
 ## Seeds
 
-`seeds()` returns a query over all 36 plantable seeds — crops, trees, and bushes alike.
+`seeds()` returns a query over all 36 plantable seeds: crops, trees, and bushes alike.
 
 ```typescript
 import { seeds } from 'dinkum-data'
