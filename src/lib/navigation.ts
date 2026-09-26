@@ -45,7 +45,7 @@ export const navigation = [
     ],
   },
   {
-    title: 'Clothing, Furniture & Decorations',
+    title: 'Clothing & Decor',
     links: [
       { title: 'Clothing', href: '/docs/clothing' },
       { title: 'Furniture & decorations', href: '/docs/furniture' },
