@@ -6,34 +6,13 @@ nextjs:
     description: Query wearable clothing by slot, type, set, and Clover's Catalogue availability.
 ---
 
-Every wearable clothing item in Dinkum, across every slot, with catalogue availability and set membership. {% .lead %}
+Access every wearable clothing item in Dinkum across every slot, including catalogue availability and set membership. {% .lead %}
 
 ---
 
-## Clothing
+## Type
 
-`clothing()` returns a `ClothingQuery` over all 532 items.
-
-### Type
-
-```typescript
-interface Clothing {
-  id: string
-  name: string
-  img: string
-  source?: string[]
-  baseSellPrice: number
-  buyPrice?: number
-  displayPrice: number | null
-  cataloguePrice: number | null
-  cloversCatalogue: boolean
-  slot: ClothingSlot[]
-  type: string
-  set: string
-}
-```
-
-### Field reference
+### `Clothing`
 
 | Field              | Type             | Description                                                               |
 | ------------------ | ---------------- | ------------------------------------------------------------------------- |
@@ -47,10 +26,25 @@ interface Clothing {
 | `cataloguePrice`   | `number \| null` | Actual catalogue purchase price, or `null` if unavailable                 |
 | `cloversCatalogue` | `boolean`        | Whether the item is available in Clover's Catalogue                       |
 | `slot`             | `ClothingSlot[]` | Slots the item occupies: `'Head'`, `'Face'`, `'Body'`, `'Legs'`, `'Feet'` |
-| `type`             | `string`         | Clothing type, e.g. `'Hood'`, `'Shirt'`, `'Boots'`                        |
+| `type`             | `string`         | Clothing type, for example `'Hood'`, `'Shirt'`, `'Boots'`                 |
 | `set`              | `string`         | Set name, or an empty string if not part of a set                         |
 
-### Filters
+The exact `type` values valid for each `slot` are enforced by the separate [Clothing Slots](/docs/clothing-slots) module.
+
+---
+
+## Factory
+
+```typescript
+import { clothing } from 'dinkum-data'
+
+clothing() // all 532 items
+clothing(source) // wrap a pre-filtered array
+```
+
+---
+
+## Filters
 
 | Method             | Signature                    | Description                                                       |
 | ------------------ | ---------------------------- | ----------------------------------------------------------------- |
@@ -59,13 +53,26 @@ interface Clothing {
 | `bySet`            | `bySet(set: string)`         | Filter to clothing belonging to the given set (case-insensitive). |
 | `cloversCatalogue` | `cloversCatalogue()`         | Filter to clothing available in Clover's Catalogue.               |
 
-### Sorts
+```typescript
+import { clothing } from 'dinkum-data'
+
+clothing().bySlot('Head').get()
+clothing().byType('Hood').get()
+clothing().bySet('Aurora Set').get()
+clothing().cloversCatalogue().get()
+```
+
+---
+
+## Sorts
 
 | Method                | Signature                                      | Default  | Description              |
 | --------------------- | ---------------------------------------------- | -------- | ------------------------ |
 | `sortByBaseSellPrice` | `sortByBaseSellPrice(order?: 'asc' \| 'desc')` | `'desc'` | Sort by base sell price. |
 
-### Terminal methods
+---
+
+## Terminal methods
 
 | Method              | Returns                 | Description                         |
 | ------------------- | ----------------------- | ----------------------------------- |
@@ -76,7 +83,9 @@ interface Clothing {
 | `.search(query)`    | `Clothing[]`            | Case-insensitive partial name match |
 | `.count()`          | `number`                | Number of results                   |
 
-### Examples
+---
+
+## Examples
 
 ```typescript
 import { clothing } from 'dinkum-data'
@@ -84,7 +93,7 @@ import { clothing } from 'dinkum-data'
 // Every hat, most valuable first
 clothing().bySlot('Head').sortByBaseSellPrice().get()
 
-// Everything from the Aurora Set
+// Everything from the Aurora set
 clothing().bySet('Aurora Set').get()
 
 // Everything currently in Clover's Catalogue
@@ -93,59 +102,8 @@ clothing().cloversCatalogue().get()
 
 ---
 
-## Clothing Slots
-
-`clothingSlots()` and `clothingTypesForSlot()` expose the clothing-slot taxonomy: which `Clothing.type` values are valid for each of the 5 clothing slots (`Head`, `Face`, `Body`, `Legs`, `Feet`). This module has no query builder, since the source data is a fixed grouped object rather than a flat, filterable list. See [core concepts](/docs/core-concepts#modules-without-a-query-builder) for why a handful of modules work this way.
-
-### Type
-
-```typescript
-type ClothingSlotTypes = Record<ClothingSlot, string[]>
-```
-
-An object with one array of valid `type` strings per slot.
-
-### Functions
-
-```typescript
-import { clothingSlots, clothingTypesForSlot } from 'dinkum-data'
-```
-
-#### `clothingSlots()`
-
-Returns the full taxonomy, grouped by slot.
-
-```typescript
-clothingSlots().Head // ["Hat", "Scarf", "Bow", "Bonnet", "Bandana", "Hood", "Bandage"]
-```
-
-#### `clothingTypesForSlot(slot: ClothingSlot)`
-
-Returns the valid `type` values for a single slot.
-
-```typescript
-clothingTypesForSlot('Feet') // ["Shoes", "Boots", "Flats"]
-```
-
-### Examples
-
-```typescript
-import { clothing, clothingTypesForSlot } from 'dinkum-data'
-
-// Build a type dropdown for the Head slot
-const headTypes = clothingTypesForSlot('Head')
-
-// Cross-reference with actual clothing data
-const hats = clothing()
-  .bySlot('Head')
-  .get()
-  .filter((c) => c.type === 'Hat')
-```
-
----
-
 ## Next steps
 
-- See [Furniture & decorations](/docs/furniture) for other placeable items with similar catalogue pricing
-- Read [TypeScript integration](/docs/typescript) for the `ClothingSlot` and `CLOTHING_SLOTS` const array
-- Browse the [query builder](/docs/query-builder) guide for more filter patterns
+- See [Clothing Slots](/docs/clothing-slots) for the slot-to-type lookup table
+- Browse [Furniture](/docs/furniture) for another catalogue-priced module
+- Read the [query builder](/docs/query-builder) guide for more filter patterns

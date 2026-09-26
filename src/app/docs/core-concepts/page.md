@@ -147,8 +147,8 @@ const allRare = rareFish.get()
 Four modules don't follow this pattern, because their source data isn't a flat, filterable list:
 
 - **[Calendar](/docs/calendar)**: a fixed 112-day structure, accessed via `calendar()`
-- **[Daily Milestones](/docs/progression)**: a fixed set of category-grouped arrays, accessed via `dailyMilestones()`, `dailyMilestonesByCategory()`, and `allDailyMilestones()`
-- **[Clothing Slots](/docs/clothing)**: a lookup table via `clothingSlots()` and `clothingTypesForSlot()`
+- **[Daily Milestones](/docs/daily-milestones)**: a fixed set of category-grouped arrays, accessed via `dailyMilestones()`, `dailyMilestonesByCategory()`, and `allDailyMilestones()`
+- **[Clothing Slots](/docs/clothing-slots)**: a lookup table via `clothingSlots()` and `clothingTypesForSlot()`
 - **[Buff Icons](/docs/buff-icons)**: a lookup table via `buffIcons()`
 
 Each of these still returns plain, fully-typed data. They just don't have `.get()`, `.first()`, and friends, since there's nothing to filter.

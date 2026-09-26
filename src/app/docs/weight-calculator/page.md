@@ -75,5 +75,5 @@ weightItems().sortByPricePerKg().get()
 ## Next steps
 
 - See the [query builder](/docs/query-builder) guide for sort method patterns shared across modules
-- Browse [Resources](/docs/resources) for related minerals and other sell-price-bearing items
+- Browse [Minerals](/docs/minerals) for related sell-price-bearing items
 - Read the [core concepts](/docs/core-concepts) page for the shared `QueryBase` terminal methods used here

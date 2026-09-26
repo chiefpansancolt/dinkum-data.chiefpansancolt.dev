@@ -230,4 +230,4 @@ for (const variant of recipe.variants) {
 
 - See [TypeScript integration](/docs/typescript) for type-safe querying
 - Read the [core concepts](/docs/core-concepts) page for the `QueryBase` pattern in depth
-- Browse individual module pages (for example [Crops & seeds](/docs/crops), [Gear & Equipment](/docs/gear)) for module-specific filters
+- Browse individual module pages (for example [Crops](/docs/crops), [Tools](/docs/tools)) for module-specific filters

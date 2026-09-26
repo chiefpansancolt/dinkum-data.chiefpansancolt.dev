@@ -55,4 +55,4 @@ if (recipe.buffs?.healthRegenRate) {
 
 - See [TypeScript integration](/docs/typescript) for the `Buffs` interface these icon fields correspond to
 - Read the [core concepts](/docs/core-concepts) page for why Buff Icons and a few other modules skip the standard `QueryBase` pattern
-- Browse [Recipes](/docs/recipes) for the cooking and Food Modeller recipes that carry `buffs` data
+- Browse [Cooking Recipes](/docs/cooking-recipes) for the recipes that carry `buffs` data

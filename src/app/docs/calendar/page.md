@@ -132,5 +132,5 @@ calendar().getAllEvents()
 ## Next steps
 
 - See the [core concepts](/docs/core-concepts) page for why Calendar and a few other modules skip the standard `QueryBase` pattern
-- Browse [Buildings & NPCs](/docs/world) for the NPC records these birthdays reference
-- See [Licenses, Milestones & Skills](/docs/progression) for the related Daily Milestones module
+- Browse [NPCs](/docs/npcs) for the NPC records these birthdays reference
+- See [Daily Milestones](/docs/daily-milestones) for the related repeatable task pool
