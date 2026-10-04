@@ -10,6 +10,14 @@ This page summarizes recent releases. See the full [CHANGELOG.md](https://github
 
 ---
 
+## Version [1.0.3](https://github.com/chiefpansancolt/dinkum-data/releases/tag/v1.0.3)
+
+### Changed
+
+Tooling and dependency updates only, with no changes to the data or the API. The project moved to
+pnpm 12, the publish workflow now releases to npm with trusted publishing, and development
+dependencies were bumped.
+
 ## Version [1.0.2](https://github.com/chiefpansancolt/dinkum-data/releases/tag/1.0.2)
 
 ### Fixed
